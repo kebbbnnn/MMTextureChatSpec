@@ -45,5 +45,8 @@ Pod::Spec.new do |s|
 
   # 9
   s.resources = "MMChatFramework/**/*.{png,jpeg,jpg,storyboard,xib}"
+
+  # 10
+  s.ios.vendored_frameworks = 'DropDown.framework'
 end
 
