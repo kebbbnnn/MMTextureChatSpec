@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.framework = "UIKit"
   s.dependency 'MBPhotoPicker'
   s.dependency 'Texture', '~> 2.3'
-  s.dependency 'DropDown', '~> 2'
+  s.dependency 'DropDown', ':git => "https://github.com/AssistoLab/DropDown"', ':branch => "master"'
   s.dependency 'Toolbar'
   s.dependency 'ionicons'
 
