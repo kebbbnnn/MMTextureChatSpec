@@ -22,9 +22,9 @@ extension ASTextNode{
                 detector.enumerateMatches(in: text, range: range) {
                     (result, _, _) in
                     if let fixedRange = result?.range {
-                        mutableString.addAttribute(NSUnderlineColorAttributeName, value: highLightColor, range: fixedRange)
-                        mutableString.addAttribute(NSLinkAttributeName, value: result?.url as Any , range: fixedRange)
-                        mutableString.addAttribute(NSForegroundColorAttributeName, value: highLightColor, range: fixedRange)
+                        mutableString.addAttribute(NSAttributedStringKey.underlineColor, value: highLightColor, range: fixedRange)
+                        mutableString.addAttribute(NSAttributedStringKey.link, value: result?.url as Any , range: fixedRange)
+                        mutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: highLightColor, range: fixedRange)
                         
                     }
                 }
@@ -45,7 +45,7 @@ extension ASTextNode{
         
         if let attrText = self.attributedText{
             let replaced = NSMutableAttributedString(attributedString: attrText)
-            var ranges : [NSRange] = []
+            var _ : [NSRange] = []
 
             do{
                 let regex = try NSRegularExpression(pattern: "@(\\w+){1,}?", options: .caseInsensitive)
@@ -54,11 +54,11 @@ extension ASTextNode{
                 let result = regex.matches(in: attrText.string, options: NSRegularExpression.MatchingOptions.withTransparentBounds, range: NSMakeRange(0,(attrText.string as NSString).length))
                 
                
-                let userDict = NSMutableDictionary()
+                _ = NSMutableDictionary()
                 for range in result{
-                    replaced.addAttribute(NSLinkAttributeName, value: "ptuser", range: range.range)
-                    replaced.addAttribute(NSUnderlineColorAttributeName, value: highLightColor, range: range.range)
-                    replaced.addAttribute(NSForegroundColorAttributeName, value: highLightColor, range: range.range)
+                    replaced.addAttribute(NSAttributedStringKey.link, value: "ptuser", range: range.range)
+                    replaced.addAttribute(NSAttributedStringKey.underlineColor, value: highLightColor, range: range.range)
+                    replaced.addAttribute(NSAttributedStringKey.foregroundColor, value: highLightColor, range: range.range)
                     
                 }
                 

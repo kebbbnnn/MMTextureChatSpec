@@ -32,9 +32,9 @@ public class MessageBubbleImageProvider {
     private let incomingColor: UIColor
     private var imageCache = [MessageProperties: UIImage]()
     
-    public init(incomingColor: UIColor = kDefaultIncomingColor, outgoingColor: UIColor = kDefaultOutgoingColor) {
-        self.incomingColor = incomingColor
-        self.outgoingColor = outgoingColor
+    public init(incomingColor: UIColor? = nil, outgoingColor: UIColor? = nil) {
+        self.incomingColor = incomingColor ?? kDefaultIncomingColor
+        self.outgoingColor = outgoingColor ?? kDefaultOutgoingColor
     }
     
     public func bubbleImage(_ isOutgoing: Bool, hasTail: Bool, color: UIColor? = nil) -> UIImage {

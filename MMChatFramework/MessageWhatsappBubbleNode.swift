@@ -33,7 +33,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
     }
     
     
-    func handleZoomTap() {
+    @objc func handleZoomTap() {
         
         if(delegate != nil){
             self.delegate.openImageGallery(message: message)
@@ -42,7 +42,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
     }
     
     
-    func handleUserTap() {
+    @objc func handleUserTap() {
         
         if(delegate != nil){
             self.delegate.openuserProfile(message: message)
@@ -144,7 +144,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
         
         if let _ = bubbleNode  as? MessageWhatsappTextNode{
             if let namecount = message.text{
-                if(namecount.string.characters.count <= 20){
+                if(namecount.string.count <= 20){
                     
                     let horizon = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: ASStackLayoutAlignItems.start, children: [stack , timeNode])
                     verticalSpec.child = ASInsetLayoutSpec(
