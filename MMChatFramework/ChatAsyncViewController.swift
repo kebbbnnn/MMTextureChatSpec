@@ -31,8 +31,8 @@ open class ChatAsyncViewController: UIViewController ,UITextViewDelegate , ChatD
     var isWhatsapp = true
     
 
-    let mineImage = UIImage(named: "bubbleMine")!.stretchableImage(withLeftCapWidth: 15, topCapHeight: 14).withRenderingMode(.alwaysTemplate)
-    let someoneImage = UIImage(named: "bubbleSomeone")!.stretchableImage(withLeftCapWidth: 21, topCapHeight: 14).withRenderingMode(.alwaysTemplate)
+    let mineImage = UIImage(named: "bubbleMine")?.stretchableImage(withLeftCapWidth: 15, topCapHeight: 14).withRenderingMode(.alwaysTemplate)
+    let someoneImage = UIImage(named: "bubbleSomeone")?.stretchableImage(withLeftCapWidth: 21, topCapHeight: 14).withRenderingMode(.alwaysTemplate)
     
     
     //Toolbar
@@ -696,7 +696,7 @@ extension ChatAsyncViewController : ASCollectionDataSource{
         let img = isOut ? mineImage : someoneImage
         return {
             if(self.isWhatsapp){
-                let node = MessageWhatsappBubbleNode(msg: msg, isOutgoing: isOut, bubbleImage: img)
+                let node = MessageWhatsappBubbleNode(msg: msg, isOutgoing: isOut, bubbleImage: img ?? UIImage())
                 node.delegate = self
                 return node
 
