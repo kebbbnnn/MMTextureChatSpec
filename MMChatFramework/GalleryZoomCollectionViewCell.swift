@@ -49,7 +49,7 @@ class GalleryZoomCollectionViewCell: UICollectionViewCell,UIScrollViewDelegate,A
         self.contentView.addSubview(self.scroll)
         
         //Indicator
-        indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
         indicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         self.contentView.addSubview(indicator)
         

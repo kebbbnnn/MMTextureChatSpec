@@ -26,7 +26,7 @@ class MessageNetworkWhatsappImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDe
         
         textNode = MessageCaptionNode()
         self.caption = text
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activity = UIActivityIndicatorView(style: .gray)
         
         super.init()
         self.backgroundColor =  UIColor.clear
@@ -42,7 +42,7 @@ class MessageNetworkWhatsappImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDe
         
         
         if(text.string != ""){
-            textNode.textContainerInset = UIEdgeInsetsMake(6, 6, 0, 8)
+            textNode.textContainerInset = UIEdgeInsets(top: 6, left: 6, bottom: 0, right: 8)
             textNode.attributedText = text
             textNode.backgroundColor = UIColor.clear
             textNode.placeholderEnabled = false
@@ -74,7 +74,7 @@ class MessageNetworkWhatsappImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDe
             
         }
         
-        let insets = UIEdgeInsetsMake(0, 0, 0, 0)
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalSpec)
         return insetSpec
         

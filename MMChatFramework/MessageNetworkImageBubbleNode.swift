@@ -25,7 +25,7 @@ public class MessageNetworkImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDel
         messageImageNode = ASNetworkImageNode()
         textNode = MessageCaptionNode()
         self.caption = text
-        activity = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activity = UIActivityIndicatorView(style: .gray)
         
         super.init()
         self.backgroundColor =  UIColor(red: 239 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
@@ -42,7 +42,7 @@ public class MessageNetworkImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDel
         
         
         if(text.string != ""){
-            textNode.textContainerInset = UIEdgeInsetsMake(8, 12, 8, 8)
+            textNode.textContainerInset = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 8)
             textNode.attributedText = text
             textNode.backgroundColor = UIColor.clear
             textNode.placeholderEnabled = false
@@ -75,7 +75,7 @@ public class MessageNetworkImageBubbleNode: ASDisplayNode ,ASNetworkImageNodeDel
             
         }
         
-        let insets = UIEdgeInsetsMake(0, 0, 0, 0)
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalSpec)
         return insetSpec
         

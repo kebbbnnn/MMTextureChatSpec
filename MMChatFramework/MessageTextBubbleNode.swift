@@ -50,11 +50,11 @@ public class MessageTextBubbleNode: ASDisplayNode , ASTextNodeDelegate{
         
         return ASBackgroundLayoutSpec(
             child: ASInsetLayoutSpec(
-                insets: UIEdgeInsetsMake(
-                    8,
-                    12 + (isOutgoing ? 0 : textNodeVerticalOffset),
-                    8,
-                    12 + (isOutgoing ? textNodeVerticalOffset : 0)),
+                insets: UIEdgeInsets(
+                    top: 8,
+                    left: 12 + (isOutgoing ? 0 : textNodeVerticalOffset),
+                    bottom: 8,
+                    right: 12 + (isOutgoing ? textNodeVerticalOffset : 0)),
                 child: textNode),
             background: bubbleImageNode)
     }

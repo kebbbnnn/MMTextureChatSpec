@@ -44,11 +44,11 @@ class MessageWhatsappTextNode : ASDisplayNode , ASTextNodeDelegate{
         let textNodeVerticalOffset = CGFloat(6)
         
         
-        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsetsMake(
-            0,
-            0 + (isOutgoing ? 0 : textNodeVerticalOffset),
-            0,
-            0 + (isOutgoing ? textNodeVerticalOffset : 0)), child: textNode)
+        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(
+            top: 0,
+            left: 0 + (isOutgoing ? 0 : textNodeVerticalOffset),
+            bottom: 0,
+            right: 0 + (isOutgoing ? textNodeVerticalOffset : 0)), child: textNode)
         
         
         return insetSpec

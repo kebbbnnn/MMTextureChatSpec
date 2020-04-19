@@ -22,9 +22,9 @@ extension ASTextNode{
                 detector.enumerateMatches(in: text, range: range) {
                     (result, _, _) in
                     if let fixedRange = result?.range {
-                        mutableString.addAttribute(NSAttributedStringKey.underlineColor, value: highLightColor, range: fixedRange)
-                        mutableString.addAttribute(NSAttributedStringKey.link, value: result?.url as Any , range: fixedRange)
-                        mutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: highLightColor, range: fixedRange)
+                        mutableString.addAttribute(NSAttributedString.Key.underlineColor, value: highLightColor, range: fixedRange)
+                        mutableString.addAttribute(NSAttributedString.Key.link, value: result?.url as Any , range: fixedRange)
+                        mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: highLightColor, range: fixedRange)
                         
                     }
                 }
@@ -56,9 +56,9 @@ extension ASTextNode{
                
                 _ = NSMutableDictionary()
                 for range in result{
-                    replaced.addAttribute(NSAttributedStringKey.link, value: "ptuser", range: range.range)
-                    replaced.addAttribute(NSAttributedStringKey.underlineColor, value: highLightColor, range: range.range)
-                    replaced.addAttribute(NSAttributedStringKey.foregroundColor, value: highLightColor, range: range.range)
+                    replaced.addAttribute(NSAttributedString.Key.link, value: "ptuser", range: range.range)
+                    replaced.addAttribute(NSAttributedString.Key.underlineColor, value: highLightColor, range: range.range)
+                    replaced.addAttribute(NSAttributedString.Key.foregroundColor, value: highLightColor, range: range.range)
                     
                 }
                 

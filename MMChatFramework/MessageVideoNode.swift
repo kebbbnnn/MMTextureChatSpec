@@ -59,7 +59,7 @@ class MessageVideoNode : ASDisplayNode{
         
         
         
-        let insets = UIEdgeInsetsMake(0, 0, 0, 0)
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalSpec)
         
         let overlay = ASOverlayLayoutSpec(child: insetSpec, overlay: playBut)

@@ -94,7 +94,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
             
         }
         if let name = msg.name{
-            nameNode.textContainerInset = UIEdgeInsetsMake(0, (isOutgoing ? 0 : 6), 0, (isOutgoing ? 6 : 0))
+            nameNode.textContainerInset = UIEdgeInsets(top: 0, left: (isOutgoing ? 0 : 6), bottom: 0, right: (isOutgoing ? 6 : 0))
             nameNode.attributedText = NSAttributedString(string: name, attributes: kAMMessageCellNodeTopTextAttributes)
             addSubnode(nameNode)
             
@@ -104,7 +104,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
         if let section = msg.sectionStamp{
             addSubnode(sectionNode)
             sectionNode.style.alignSelf = .center
-            sectionNode.textContainerInset = UIEdgeInsetsMake(5, 20, 5, 20)
+            sectionNode.textContainerInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
             sectionNode.backgroundColor = UIColor.lightText
             sectionNode.cornerRadius = 12
             sectionNode.clipsToBounds = true
@@ -148,13 +148,13 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
                     
                     let horizon = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: ASStackLayoutAlignItems.start, children: [stack , timeNode])
                     verticalSpec.child = ASInsetLayoutSpec(
-                        insets: UIEdgeInsetsMake(8,12 + (isOutgoing ? 0 : textNodeVerticalOffset),8,12 + (isOutgoing ? textNodeVerticalOffset : 0)),child: horizon)
+                        insets: UIEdgeInsets(top: 8,left: 12 + (isOutgoing ? 0 : textNodeVerticalOffset),bottom: 8,right: 12 + (isOutgoing ? textNodeVerticalOffset : 0)),child: horizon)
                     
                     
                 }else{
                     stack.setChild(timeNode, at: 2)
                     verticalSpec.child = ASInsetLayoutSpec(
-                        insets: UIEdgeInsetsMake(8,12 + (isOutgoing ? 0 : textNodeVerticalOffset),8,12 + (isOutgoing ? textNodeVerticalOffset : 0)),child: stack)
+                        insets: UIEdgeInsets(top: 8,left: 12 + (isOutgoing ? 0 : textNodeVerticalOffset),bottom: 8,right: 12 + (isOutgoing ? textNodeVerticalOffset : 0)),child: stack)
                     
                 }
                 
@@ -170,7 +170,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
                 
                 stack.setChild(timeNode, at: 2)
                 verticalSpec.child = ASInsetLayoutSpec(
-                    insets:UIEdgeInsetsMake(8,(isOutgoing ? 8 : 16),8,(isOutgoing ? 16 : 8)),child: stack)
+                    insets:UIEdgeInsets(top: 8,left: (isOutgoing ? 8 : 16),bottom: 8,right: (isOutgoing ? 16 : 8)),child: stack)
                 
                 
             }else{
@@ -180,7 +180,7 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
                 let check = ASOverlayLayoutSpec(child: bubbleImageNode, overlay: textInsetSpec)
                 
                 verticalSpec.child = ASInsetLayoutSpec(
-                    insets: UIEdgeInsetsMake(8,(isOutgoing ? 8 : 16),8,(isOutgoing ? 16 : 8)),child: stack)
+                    insets: UIEdgeInsets(top: 8,left: (isOutgoing ? 8 : 16),bottom: 8,right: (isOutgoing ? 16 : 8)),child: stack)
                 verticalSpec.background = check
                 
             }
@@ -194,13 +194,13 @@ class MessageWhatsappBubbleNode: ASCellNode,ASVideoNodeDelegate{
             let check = ASOverlayLayoutSpec(child: bubbleImageNode, overlay: textInsetSpec)
             
             verticalSpec.child = ASInsetLayoutSpec(
-                insets: UIEdgeInsetsMake(8,(isOutgoing ? 8 : 16),8,(isOutgoing ? 16 : 8)),child: stack)
+                insets: UIEdgeInsets(top: 8,left: (isOutgoing ? 8 : 16),bottom: 8,right: (isOutgoing ? 16 : 8)),child: stack)
             verticalSpec.background = check
         }
         
         
         //space it
-        let insetSpec = ASInsetLayoutSpec(insets: isOutgoing ? UIEdgeInsetsMake(1, 32, 5, 4) : UIEdgeInsetsMake(1, 4, 5, 32), child: verticalSpec)
+        let insetSpec = ASInsetLayoutSpec(insets: isOutgoing ? UIEdgeInsets(top: 1, left: 32, bottom: 5, right: 4) : UIEdgeInsets(top: 1, left: 4, bottom: 5, right: 32), child: verticalSpec)
         
         
         let stackSpec = ASStackLayoutSpec()

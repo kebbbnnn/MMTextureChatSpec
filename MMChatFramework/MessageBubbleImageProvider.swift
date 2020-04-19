@@ -74,7 +74,7 @@ public class MessageBubbleImageProvider {
          print(bubble.size)
         // make image stretchable from center point
         let center = CGPoint(x: bubble.size.width / 2.0, y: bubble.size.height / 2.0)
-        let capInsets = UIEdgeInsetsMake(center.y, center.x, center.y, center.x);
+        let capInsets = UIEdgeInsets(top: center.y, left: center.x, bottom: center.y, right: center.x);
         
         normalBubble = MessageBubbleImageProvider.stretchableImage(normalBubble, capInsets: capInsets)
         return normalBubble

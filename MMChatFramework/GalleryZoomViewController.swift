@@ -41,7 +41,7 @@ class GalleryZoomViewController: UICollectionViewController,UICollectionViewDele
         let flowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
         flowLayout.itemSize = CGSize(width : view.frame.width, height : view.frame.height )
-        flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 0
         flowLayout.scrollDirection = .horizontal
@@ -53,7 +53,7 @@ class GalleryZoomViewController: UICollectionViewController,UICollectionViewDele
 
         self.collectionView?.isPagingEnabled = true
         if(initialIndex != 0){
-            self.collectionView?.scrollToItem(at: IndexPath(item: initialIndex, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
+            self.collectionView?.scrollToItem(at: IndexPath(item: initialIndex, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: false)
 
         }
         
