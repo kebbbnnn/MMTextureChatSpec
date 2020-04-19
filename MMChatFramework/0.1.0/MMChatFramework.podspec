@@ -22,14 +22,14 @@ Pod::Spec.new do |s|
   s.license = { :type => "MIT", :file => "LICENSE" }
 
   # 4 - Replace with your name and e-mail address
-  s.author = { "Mukesh Mandora" => "mandoramuku07@gmail.com" }
+  s.author = { "Kevin Ladan" => "kevinladan@outlook.com" }
 
   # 5 - Replace this URL with your own Github page's URL (from the address bar)
-  s.homepage = "https://github.com/mukyasa/MMTextureChatSpec"
+  s.homepage = "https://github.com/kebbbnnn/MMTextureChatSpec"
 
 
   # 6 - Replace this URL with your own Git URL from "Quick Setup"
-  s.source = { :git => "https://github.com/mukyasa/MMTextureChatSpec.git", :tag => "#{s.version}"}
+  s.source = { :git => "https://github.com/kebbbnnn/MMTextureChatSpec.git", :tag => "#{s.version}"}
 
 
   # 7
