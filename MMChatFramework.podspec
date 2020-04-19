@@ -10,35 +10,35 @@ Pod::Spec.new do |s|
 
  # 1
   s.platform = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   s.name = "MMChatFramework"
   s.summary = "AsyncDisplayKit(Texture) smooth scroll Chat Simulation"
   s.requires_arc = true
 
   # 2
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   # 3
   s.license = { :type => "MIT", :file => "LICENSE" }
 
   # 4 - Replace with your name and e-mail address
-  s.author = { "Mukesh Mandora" => "mandoramuku07@gmail.com" }
+  s.author = { "Kevin Ladan" => "kevinladan@outlook.com" }
 
   # 5 - Replace this URL with your own Github page's URL (from the address bar)
-  s.homepage = "https://github.com/mukyasa/MMTextureChatSpec"
+  s.homepage = "https://github.com/kebbbnnn/MMTextureChatSpec"
 
 
   # 6 - Replace this URL with your own Git URL from "Quick Setup"
-  s.source = { :git => "https://github.com/mukyasa/MMTextureChatSpec.git", :tag => "#{s.version}"}
+  s.source = { :git => "https://github.com/kebbbnnn/MMTextureChatSpec.git", :tag => "#{s.version}"}
 
 
-  # 7
-  s.framework = "UIKit"
-  s.dependency 'MBPhotoPicker'
-  s.dependency 'Texture', '~> 2.3'
-  s.dependency 'DropDown', '2.3.2'
-  s.dependency 'Toolbar'
-  s.dependency 'ionicons'
+   # 7
+   s.framework = "UIKit"
+   s.dependency 'MBPhotoPicker', :git => 'https://github.com/mbutan/MBPhotoPicker.git', :branch => 'master'
+   s.dependency 'Texture', '~> 2.8.0'
+   s.dependency 'DropDown', :git => 'https://github.com/AssistoLab/DropDown.git', :branch => 'master'
+   s.dependency 'Toolbar', '~> 0.7.3'
+   s.dependency 'ionicons'
 
   # 8
   s.source_files = "MMChatFramework/**/*.{swift}"
