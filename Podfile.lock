@@ -40,7 +40,7 @@ PODS:
   - Toolbar (0.7.3)
 
 DEPENDENCIES:
-  - DropDown (= 2.3.13)
+  - DropDown (from `https://github.com/AssistoLab/DropDown.git`, branch `master`)
   - ionicons
   - MBPhotoPicker (from `https://github.com/mbutan/MBPhotoPicker.git`, branch `master`)
   - Texture (~> 2.8.0)
@@ -48,7 +48,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - DropDown
     - ionicons
     - PINCache
     - PINOperation
@@ -57,17 +56,23 @@ SPEC REPOS:
     - Toolbar
 
 EXTERNAL SOURCES:
+  DropDown:
+    :branch: master
+    :git: https://github.com/AssistoLab/DropDown.git
   MBPhotoPicker:
     :branch: master
     :git: https://github.com/mbutan/MBPhotoPicker.git
 
 CHECKOUT OPTIONS:
+  DropDown:
+    :commit: 3fe7151a65d424e87ee3f0e2a13d72a16ce51c55
+    :git: https://github.com/AssistoLab/DropDown.git
   MBPhotoPicker:
     :commit: 8f0d9ea4fed1df88a212417318aa46b977317eb4
     :git: https://github.com/mbutan/MBPhotoPicker.git
 
 SPEC CHECKSUMS:
-  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DropDown: bf260fd688978138019ad7d94f63a2362dad85ba
   ionicons: 630bcd2c2970741c3359e3a35ad544e71d3c086b
   MBPhotoPicker: 08c95a560ba3e7b993ebd5d28aa58fd01f968af8
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
@@ -76,6 +81,6 @@ SPEC CHECKSUMS:
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   Toolbar: 4321f97ec8ea5f20ecee5a55e505a319bd5e3021
 
-PODFILE CHECKSUM: 868c81886c427234e1824e0ad87050d35871849a
+PODFILE CHECKSUM: 4a23d414157f79412333c8a5505a9adcf8c2a696
 
 COCOAPODS: 1.8.4
