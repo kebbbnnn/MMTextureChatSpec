@@ -6,7 +6,7 @@ target 'MMChatFramework' do
   use_frameworks!
   pod 'MBPhotoPicker'
   pod 'Texture', '~> 2.3'
-  #pod 'DropDown', '~> 2'
+  pod 'DropDown', '2.3.2'
   pod 'Toolbar'
   pod 'ionicons'
   # Pods for MMChatFramework
