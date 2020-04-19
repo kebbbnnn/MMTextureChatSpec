@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.framework = "UIKit"
   s.dependency 'MBPhotoPicker'
   s.dependency 'Texture', '~> 2.3'
-  #s.dependency 'DropDown', '~> 2'
+  s.dependency 'DropDown', '2.3.2'
   s.dependency 'Toolbar'
   s.dependency 'ionicons'
 
@@ -47,6 +47,6 @@ Pod::Spec.new do |s|
   s.resources = "MMChatFramework/**/*.{png,jpeg,jpg,storyboard,xib}"
 
   # 10
-  s.ios.vendored_frameworks = 'DropDown.framework'
+  #s.ios.vendored_frameworks = 'DropDown.framework'
 end
 

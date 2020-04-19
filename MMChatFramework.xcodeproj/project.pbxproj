@@ -32,7 +32,6 @@
 		8BC076541F6AACD50080CAE7 /* UIImageEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC0763E1F6AACD50080CAE7 /* UIImageEx.swift */; };
 		8BC076681F6AB6850080CAE7 /* ChatAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC076671F6AB6850080CAE7 /* ChatAssets.xcassets */; };
 		B9BEB8BFBDF9A625F41077DA /* Pods_MMChatFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B32ED0C53B89E5F16A56EBE /* Pods_MMChatFramework.framework */; };
-		FDD8C9681FCAC10B000C546C /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD8C9671FCAC10B000C546C /* DropDown.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +64,6 @@
 		8BC076671F6AB6850080CAE7 /* ChatAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChatAssets.xcassets; sourceTree = "<group>"; };
 		A0D0D6D38AA1085886A3456F /* Pods-MMChatFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMChatFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMChatFramework/Pods-MMChatFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		DBBB65AE1BF246A540F6FC9A /* Pods-MMChatFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMChatFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMChatFramework/Pods-MMChatFramework.release.xcconfig"; sourceTree = "<group>"; };
-		FDD8C9671FCAC10B000C546C /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropDown.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD8C9681FCAC10B000C546C /* DropDown.framework in Frameworks */,
 				B9BEB8BFBDF9A625F41077DA /* Pods_MMChatFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +81,6 @@
 		171742BAA5BC4D63442648BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FDD8C9671FCAC10B000C546C /* DropDown.framework */,
 				3B32ED0C53B89E5F16A56EBE /* Pods_MMChatFramework.framework */,
 			);
 			name = Frameworks;
@@ -316,7 +312,6 @@
 				8BC0761A1F6AAB7F0080CAE7 /* Frameworks */,
 				8BC0761B1F6AAB7F0080CAE7 /* Headers */,
 				8BC0761C1F6AAB7F0080CAE7 /* Resources */,
-				D16DA89C6677A859C1C54814 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,6 +344,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -391,21 +387,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D16DA89C6677A859C1C54814 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMChatFramework/Pods-MMChatFramework-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
